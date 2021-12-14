@@ -1,0 +1,140 @@
+@import "styles/variables.scss";
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $white;
+
+  .container {
+    width: 600px;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: $border-radius;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    .header {
+      width: 100%;
+      padding: $p-1;
+
+      h1 {
+        line-height: 1;
+        color: $red;
+        font-weight: $font-w-300;
+        font-size: 2rem;
+      }
+    }
+
+    .newTodoContainer {
+      padding: $p-1;
+      border-top: 1px solid rgba(0, 0, 0, 0.16);
+      display: flex;
+
+      .newInpContainer {
+        min-height: 50px;
+        width: 100%;
+      }
+
+      .addBtnContainer {
+        min-height: 50px;
+        width: 50px;
+        padding-left: 10px;
+        display: none;
+      }
+
+      .showAddBtn {
+        display: flex;
+      }
+    }
+
+    .todosInfo {
+      padding: $p-1;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h4 {
+        color: $black;
+        font-size: 1.1rem;
+        font-weight: $font-w-500;
+      }
+
+      button {
+        border-radius: $border-radius;
+        background-color: $red;
+        padding: 5px 10px;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+
+    .todos {
+      border-top: 1px solid rgba(0, 0, 0, 0.16);
+
+      .todo {
+        padding: $p-1;
+        display: flex;
+        align-items: center;
+
+        p {
+          flex: 1;
+          padding-right: 5px;
+          color: $black;
+        }
+
+        .checked {
+          color: $red;
+          text-decoration: line-through;
+        }
+
+        button {
+          font-size: 20px;
+          width: 35px;
+          height: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          border-radius: $border-radius;
+
+          &:not(:last-of-type) {
+            margin-right: 5px;
+          }
+
+          &:last-of-type:hover {
+            background-color: $red;
+            color: $white;
+          }
+
+          &:first-of-type {
+            background-color: #26c281;
+            color: $white;
+          }
+
+          &:last-of-type {
+            color: $red;
+          }
+        }
+      }
+
+      .todo:not(:last-child) {
+        border-bottom: 1px solid $black;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: $p-1;
+
+    .container {
+      width: unset;
+      width: 100% !important;
+    }
+  }
+}

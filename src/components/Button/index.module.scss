@@ -1,0 +1,25 @@
+@import "styles/variables.scss";
+
+.button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $red !important;
+  border-radius: $border-radius;
+  font-family: inherit !important;
+  font-weight: $font-w-300 !important;
+  color: $red;
+  transition: all 0.3s;
+
+  .addIcon {
+    font-size: 25px;
+    color: inherit;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $red;
+    color: $white;
+  }
+}
