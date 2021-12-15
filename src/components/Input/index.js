@@ -21,7 +21,9 @@ const Input = ({ label, id, val, setTodo }) => {
           onBlur={() => setIsFocused(false)}
           name="newTodo"
           onChange={(e) => setTodo(e.target.value)}
+          // onKeyDown={(e) => e.keyCode === 13 && setTodo(e.target.value)} // for ENTER key event
           autoFocus
+          autoComplete="off"
         />
         {val.length > 0 && <VscClose className={clsx(styles.closeIcon, isFocused ? styles.iconActive : styles.iconNoActive)} onClick={() => setTodo("")} />}
       </div>

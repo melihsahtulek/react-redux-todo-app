@@ -87,7 +87,7 @@
         }
 
         .checked {
-          color: $red;
+          color: $green;
           text-decoration: line-through;
         }
 
@@ -111,7 +111,11 @@
           }
 
           &:first-of-type {
-            background-color: #26c281;
+            color: $green;
+          }
+
+          &:first-of-type:hover {
+            background-color: $green;
             color: $white;
           }
 
